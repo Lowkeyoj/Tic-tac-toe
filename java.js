@@ -1,17 +1,18 @@
 const gameboard = document.querySelector('#gameboard');
 
-const matrix = [];
 
-let test = Array.from(gameboard.children);
-
-console.log(test[0].textContent)
-
-row = [test[0],test[1],test[2]];
-
-function textmaker(div){
-    return div.textContent
+const gamplay = (function(){
+ const player = {player1: 'x', player2: '0',}
+ const toText = function(div){
+    div.addEventListener('click',() => div.textContent 
+    = `${player.player1}` || `${player.player2}`);
+    
+    return div.textContent};
+ const matrix = Array.from(gameboard.children).map(toText);
+  
+ return{matrix,player}
 }
+)();
+ 
 
-function checker(value){
-     return textmaker(value) === row[0].textContent;
-}
+
