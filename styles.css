@@ -1,0 +1,23 @@
+#gameboard {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ grid-template-rows: repeat(3, 1fr);
+ border-style: solid;
+ border-color: crimson;
+ width: 40vh;
+ height: 40vh;
+ padding: 10px;
+}
+
+
+
+[id^='row'] {
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ border-color: blue;
+ border-style: solid;
+ align-items: center;   
+}
+
